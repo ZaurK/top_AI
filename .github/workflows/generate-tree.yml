@@ -1,0 +1,38 @@
+name: Auto Generate Repository Tree
+
+on:
+  push:
+    branches:
+      - main  # Замените на master, если ваша главная ветка называется так
+    paths-ignore:
+      - 'repository-tree.txt' # Предотвращает бесконечный цикл запусков
+
+jobs:
+  update-tree:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Скачиваем актуальный код репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Генерируем красивое дерево папок
+      - name: Generate Tree File
+        run: |
+          echo "### Структура проекта" > repository-tree.txt
+          echo "\`\`\`" >> repository-tree.txt
+          # Исключаем системную папку .git. Добавьте другие через знак |, например "node_modules|.git|venv"
+          tree -a -I ".git" >> repository-tree.txt
+          echo "\`\`\`" >> repository-tree.txt
+
+      # 3. Сохраняем изменения обратно в репозиторий
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git add repository-tree.txt
+          # Проверяем, изменилось ли дерево, чтобы не плодить пустые коммиты
+          if ! git diff --staged --quiet; then
+            git commit -m "docs: автоматическое обновление структуры проекта [skip ci]"
+            git push
+          fi
