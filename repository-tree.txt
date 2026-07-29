@@ -43,6 +43,7 @@
 │   ├── .gitkeep
 │   └── README.md
 ├── repository-tree.txt
+├── requirements.txt
 ├── resources
 │   ├── .gitkeep
 │   ├── README.md
@@ -134,5 +135,5 @@
 │   └── kim-08-МУ_к_ЛР_8_Современные_тенденции_и_вызовы_в_области_компьютерного_зрения.md
 └── №45_шаблон презентации.pptx
 
-34 directories, 99 files
+34 directories, 100 files
 ```
