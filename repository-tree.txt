@@ -7,9 +7,8 @@
 ├── CONTRIBUTING.md
 ├── Exam
 │   ├── README.md
-│   ├── attachments
-│   │   └── .gitkeep
-│   └── База вопросов для тестов.zip
+│   └── attachments
+│       └── .gitkeep
 ├── LICENSE
 ├── Project
 │   ├── README.md
@@ -136,5 +135,5 @@
 │   └── kim-08-МУ_к_ЛР_8_Современные_тенденции_и_вызовы_в_области_компьютерного_зрения.md
 └── №45_шаблон презентации.pptx
 
-34 directories, 101 files
+34 directories, 100 files
 ```
