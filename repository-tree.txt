@@ -27,7 +27,8 @@
 │   ├── .gitkeep
 │   ├── README.md
 │   ├── quality-checklist.md
-│   └── rpd.md
+│   ├── rpd.md
+│   └── Главный раздел РПД + баллы+дескрипторы.xlsx
 ├── methodical-guidelines
 │   ├── .gitkeep
 │   ├── README.md
@@ -135,5 +136,5 @@
 │   └── kim-08-МУ_к_ЛР_8_Современные_тенденции_и_вызовы_в_области_компьютерного_зрения.md
 └── №45_шаблон презентации.pptx
 
-34 directories, 100 files
+34 directories, 101 files
 ```
